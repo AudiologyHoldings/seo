@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+- Add the `disableNotifications` option to stop the approval emails
+- Convert an array returned by a redirect callback to a URL with `Router::url()`
+- Add indexes on `is_active` and `priority` of `seo_redirects` and `seo_status_codes` (migration `1442429938_add_index_to_seo`, also in `Config/Schema/schema.php`)
+
 ## 6.2.6
 - Fix the approval email of a regular expression URI linking to the missing `seo_redirects/approve` action; it now links to `SeoUrisController::admin_approve()` with the URI id
 - Fix the approval email being sent before the redirect was saved, which left the redirect and priority empty

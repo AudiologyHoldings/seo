@@ -115,6 +115,8 @@ class SeoSchema extends CakeSchema
         'indexes' => [
             'PRIMARY' => ['column' => 'id', 'unique' => 1],
             'seo_uri_id' => ['column' => 'seo_uri_id', 'unique' => 0],
+            'is_active' => ['column' => 'is_active', 'unique' => 0],
+            'priority' => ['column' => 'priority', 'unique' => 0],
         ],
         'tableParameters' => ['charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'MyISAM'],
     ];
@@ -142,6 +144,8 @@ class SeoSchema extends CakeSchema
         'indexes' => [
             'PRIMARY' => ['column' => 'id', 'unique' => 1],
             'seo_uri_id' => ['column' => 'seo_uri_id', 'unique' => 0],
+            'is_active' => ['column' => 'is_active', 'unique' => 0],
+            'priority' => ['column' => 'priority', 'unique' => 0],
         ],
         'tableParameters' => ['charset' => 'latin1', 'collate' => 'latin1_swedish_ci', 'engine' => 'MyISAM'],
     ];
