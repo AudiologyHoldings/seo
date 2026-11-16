@@ -174,6 +174,10 @@ class SeoAppError
                     // if we have false as the retval, do NOT run the redirect
                     return;
                 }
+                if (is_array($callback_retval)) {
+                    // A callback may return a Cake URL array
+                    $callback_retval = Router::url($callback_retval);
+                }
                 $redirect = str_replace('{callback}', $callback_retval, $redirect);
             }
 
